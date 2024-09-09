@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CompassNavigatorPro;
 using Mirror;
 using UnityEngine;
 using Player.Manager;
@@ -46,6 +47,8 @@ namespace Player.PlayerControl
         [SerializeField] Transform HeadTarget, HeadLook;
         float kafaAci = 90;
 
+        public CompassPro _CompassPro;
+
         // public override void OnStartLocalPlayer()
         // {
         //     if (SceneManager.GetActiveScene().buildIndex == 0) return;
@@ -64,6 +67,7 @@ namespace Player.PlayerControl
             Camera.main.transform.SetParent(transform);
             Camera.main.transform.localPosition =
                 new Vector3(CameraRoot.position.x, CameraRoot.position.y, CameraRoot.position.z);
+            _CompassPro.miniMapCamera = Camera.main;
         }
 
         private void Start()

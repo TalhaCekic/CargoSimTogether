@@ -1150,6 +1150,7 @@ GameObject:
   - component: {fileID: 165561115366039473}
   - component: {fileID: 8843430258737130718}
   - component: {fileID: 23112644115804089}
+  - component: {fileID: 116571912278487902}
   m_Layer: 0
   m_Name: Player5
   m_TagString: Player
@@ -1250,6 +1251,7 @@ MonoBehaviour:
   playerMenuManager: {fileID: 1640328272136123631}
   HeadTarget: {fileID: 6806981326514948813}
   HeadLook: {fileID: 1678906601617560898}
+  _CompassPro: {fileID: 116571912278487902}
 --- !u!114 &3494786372227598913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,6 +1677,233 @@ MonoBehaviour:
   LearnCardAmount: 0
   Template: {fileID: 9197481963319205126, guid: 540272ac6dd753c43965f85642baaf54,
     type: 3}
+--- !u!114 &116571912278487902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266451415077493300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4781b8002fc8f4f47907cbd485ba3133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cameraMain: {fileID: 0}
+  _follow: {fileID: 0}
+  _updateMode: 0
+  _updateIntervalFrameCount: 60
+  _updateIntervalTime: 0.2
+  _hideIfNoCamera: 0
+  _showCompassBar: 0
+  _style: 12
+  _compassBackSprite: {fileID: 0}
+  _compassBackSpriteScrollable: 0
+  _compassBackSpriteScrollOffset: 0
+  _compassTintColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+  _northDegrees: 0
+  _visibleMaxDistance: 500
+  _visibleMinDistance: 0
+  _titleMinPOIDistance: 10
+  _nearDistance: 75
+  _visitedDistance: 2
+  _showOnScreenIndicators: 1
+  _compassIconPrefab: {fileID: 1385918027501300178, guid: f12bdec15a51f4a1eb951e168dfaa08e,
+    type: 3}
+  _onScreenIndicatorPrefab: {fileID: 581153794483119717, guid: ce8e0ba24dc3a46be879976007c2b616,
+    type: 3}
+  _onScreenIndicatorAlpha: 0.85
+  _onScreenIndicatorScale: 1
+  _onScreenIndicatorFarDistance: 10000
+  _onScreenIndicatorNearFadeDistance: 15
+  _onScreenIndicatorNearFadeMin: 5
+  _onScreenIndicatorShowDistance: 1
+  _onScreenIndicatorShowDistanceFormat: 0m
+  _onScreenIndicatorShowTitle: 1
+  _showOffScreenIndicators: 1
+  _offScreenIndicatorScale: 0.7
+  _offScreenIndicatorMargin: 0.04
+  _offScreenIndicatorRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  _offScreenIndicatorAvoidOverlap: 1
+  _offScreenIndicatorOverlapDistance: 0.04
+  _offScreenIndicatorAlpha: 0.85
+  _alpha: 1
+  _autoHide: 0
+  _fadeDuration: 2
+  _alwaysVisibleInEditMode: 1
+  _verticalPosition: 0.94
+  _horizontalPosition: 0
+  _bendAmount: 0
+  _width: 0.65
+  _height: 1
+  _edgeFadeOut: 0
+  _edgeFadeOutText: 0
+  _edgeFadeOutWidth: 0.1
+  _edgeFadeOutStart: 0
+  _endCapsWidth: 54
+  _showCardinalPoints: 1
+  _showOrdinalPoints: 1
+  _cardinalScale: 1
+  _ordinalScale: 1
+  _cardinalPointsVerticalOffset: 0
+  _showHalfWinds: 1
+  _halfWindsHeight: 0.125
+  _halfWindsWidth: 0.25
+  _halfWindsInterval: 5
+  _halfWindsTintColor: {r: 1, g: 1, b: 1, a: 0.101960786}
+  _labelHotZone: 0.01
+  _maxIconSize: 1.1508378
+  _minIconSize: 0.49916196
+  _scaleInDuration: 0.3
+  _focusedPOI: {fileID: 0}
+  _worldMappingMode: 1
+  _textVerticalPosition: -35
+  _textScale: 0.2
+  _textLetterSpacing: 1
+  _textRevealEnabled: 1
+  _textRevealDuration: 0.5
+  _textRevealLetterDelay: 0.05
+  _textDuration: 5
+  _textFadeOutDuration: 2
+  _textShadowEnabled: 1
+  _textFont: {fileID: 12800000, guid: 0da88a9ec987b428a92f5680bd420358, type: 3}
+  _titleVerticalPosition: 23
+  _titleScale: 0.1
+  _titleFont: {fileID: 12800000, guid: 685f860a3b6464799bd6cd93c9e446e6, type: 3}
+  _titleShadowEnabled: 1
+  _titleFontTMP: {fileID: 11400000, guid: 448020c67ab6d4fcb80ad445112254ac, type: 2}
+  _titleShowDistance: 0
+  _titleShowDistanceFormat: 0.0 m
+  _use3Ddistance: 0
+  _sameAltitudeThreshold: 3
+  _showDistance: 1
+  _showDistanceFormat: 0m
+  _visitedDefaultAudioClip: {fileID: 8300000, guid: 26f4607af60e4429c8a0836f57a98569,
+    type: 3}
+  _beaconDefaultAudioClip: {fileID: 8300000, guid: 7836bd1e118fd4951a025965fa25448b,
+    type: 3}
+  _heartbeatDefaultAudioClip: {fileID: 8300000, guid: 7df58c4da7e344cf1ac45954dbdc36e4,
+    type: 3}
+  _dontDestroyOnLoad: 0
+  _fogOfWarEnabled: 1
+  _fogOfWarCenter: {x: 0, y: 0, z: 0}
+  _fogOfWarSize: {x: 1024, y: 0, z: 1024}
+  _fogOfWarTextureSize: 512
+  _fogOfWarColor: {r: 0.18431373, g: 0.18431373, b: 0.18431373, a: 1}
+  _fogOfWarAutoClear: 1
+  _fogOfWarAutoClearRadius: 20
+  _fogOfWarDefaultAlpha: 1
+  _showMiniMap: 1
+  _miniMapPositionAndSize: 0
+  _miniMapLocation: 8
+  _miniMapVisibleMaxDistance: 10000
+  _miniMapScreenPositionOffset: {x: -5, y: 5}
+  _miniMapKeepStraight: 0
+  _miniMapOrientation: 0
+  _miniMapCameraTilt: 0
+  _miniMapSize: 0.35
+  _miniMapMaskSprite: {fileID: 21300000, guid: 4dbf4478fe63e401b9c7f416d9262535, type: 3}
+  _miniMapBorderTexture: {fileID: 2800000, guid: dfc31cb5f7ba1447eb8615e95a67f0dc,
+    type: 3}
+  _miniMapStyle: 2
+  _miniMapBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  _miniMapBackgroundOpaque: 0
+  _miniMapContents: 0
+  _miniMapContentsTexture: {fileID: 0}
+  _miniMapContentsTextureAllowRotation: 0
+  _miniMapMaskSpriteFullScreenMode: {fileID: 0}
+  _miniMapBorderTextureFullScreenMode: {fileID: 0}
+  _miniMapFullScreenStyle: 1
+  _miniMapResolution: 512
+  _miniMapFullScreenResolution: 1024
+  _miniMapFullScreenZoomLevel: 1
+  _miniMapFullScreenPlaceholder: {fileID: 0}
+  _miniMapFullScreenClampBorder: 0.02
+  _miniMapFullScreenClampBorderCircular: 0
+  _miniMapFullScreenSize: 0.9
+  _miniMapFullScreenContents: 0
+  _miniMapFullScreenContentsTexture: {fileID: 0}
+  _miniMapKeepAspectRatio: 1
+  _miniMapAllowUserDrag: 1
+  _miniMapFullScreenAllowUserDrag: 0
+  _miniMapDragMaxDistance: 1000
+  _miniMapCameraMode: 1
+  _miniMapCameraSnapshotFrequency: 0
+  _miniMapCaptureSize: 256
+  _miniMapSnapshotInterval: 10
+  _miniMapSnapshotDistance: 10
+  _miniMapContrast: 1.02
+  _miniMapBrightness: 1.05
+  _miniMapTintColor: {r: 1, g: 0, b: 0, a: 0}
+  _miniMapEnableShadows: 0
+  _miniMapZoomMin: 0.01
+  _miniMapZoomMax: 1
+  _miniMapIconPrefab: {fileID: 2055932612354822236, guid: e34b7cb4566ca490e8293710ff695022,
+    type: 3}
+  _miniMapIconPositionShift: {x: 0, y: 0}
+  _miniMapZoomLevel: 0.5
+  _miniMapCameraMinAltitude: 10
+  _miniMapCameraMaxAltitude: 100
+  _miniMapCameraHeightVSFollow: 200
+  _miniMapCameraDepth: 1000
+  _miniMapLayerMask:
+    serializedVersion: 2
+    m_Bits: 2147483701
+  _miniMapIconSize: 0.5
+  _miniMapShowPlayerIcon: 1
+  _miniMapPlayerIconSize: 1
+  _miniMapPlayerIconSprite: {fileID: 21300000, guid: 23d0c2f6577ce4b16b97d882c745a7df,
+    type: 3}
+  _miniMapPlayerIconColor: {r: 1, g: 1, b: 1, a: 1}
+  _miniMapShowCardinals: 1
+  _miniMapCardinalsSize: 1
+  _miniMapCardinalsSprite: {fileID: 21300000, guid: 39abea54fe78744388fb7b41f8ab596c,
+    type: 3}
+  _miniMapCardinalsColor: {r: 1, g: 1, b: 1, a: 1}
+  _miniMapShowViewCone: 1
+  _miniMapViewConeColor: {r: 1, g: 1, b: 1, a: 0.25}
+  _miniMapViewConeFoVSource: 0
+  _miniMapViewConeFoV: 60
+  _miniMapViewConeDistance: 40
+  _miniMapViewConeFallOff: 0.75
+  _miniMapShowViewConeOutline: 0
+  _miniMapViewConeOutlineColor: {r: 1, g: 1, b: 1, a: 0.5}
+  _miniMapClampBorder: 0.35
+  _miniMapClampBorderCircular: 1
+  _miniMapVignette: 1
+  _miniMapAlpha: 1
+  _miniMapShowZoomInOutButtons: 1
+  _miniMapIconCircleAnimationDuration: 1
+  _miniMapShowMaximizeButton: 1
+  _miniMapButtonsScale: 1
+  _miniMapIconEvents: 1
+  _miniMapRadarInfoDisplay: 1
+  _miniMapRadarRingsColor: {r: 1, g: 1, b: 1, a: 1}
+  _miniMapRadarRingsDistance: 5.32
+  _miniMapRadarRingsWidth: 1
+  _miniMapRadarPulseEnabled: 1
+  _miniMapRadarPulseAnimationPreset: 0
+  _miniMapRadarPulseOpacity: 0.5
+  _miniMapRadarPulseFrequency: 0.1
+  _miniMapRadarPulseFallOff: 50
+  _miniMapRadarPulseSpeed: 5
+  _miniMapFullScreenState: 0
+  _miniMapFullScreenWorldCenter: {x: 0, y: 0, z: 0}
+  _miniMapFullScreenWorldSize: {x: 1000, y: 0, z: 1000}
+  miniMapFullScreenWorldCenterFollows: 0
+  miniMapFullScreenFreezeCamera: 1
+  miniMapFullScreenClampToWorldEdges: 1
+  miniMapClampToWorldEdges: 0
+  _miniMapWorldCenter: {x: 0, y: 0, z: 0}
+  _miniMapWorldSize: {x: 1000, y: 0, z: 1000}
+  _miniMapLutIntensity: 1
+  _miniMapLutTexture: {fileID: 0}
+  _miniMapVignetteColor: {r: 0, g: 0, b: 0, a: 0.2627451}
 --- !u!1 &2305594117445442076
 GameObject:
   m_ObjectHideFlags: 0
