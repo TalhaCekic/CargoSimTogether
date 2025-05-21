@@ -58,8 +58,8 @@ namespace Player.PlayerControl
         // }        
         public override void OnStartLocalPlayer()
         {
-            
-        }        
+
+        }
         public override void OnStartAuthority()
         {
             if (SceneManager.GetActiveScene().buildIndex == 0) return;
@@ -77,7 +77,7 @@ namespace Player.PlayerControl
             _hasAnimator = TryGetComponent<Animator>(out _animator);
             _playerRigidbody = GetComponent<Rigidbody>();
             _inputManager = GetComponent<InputManager>();
-            
+
 
             _xVelHash = Animator.StringToHash("X_Velocity");
             _yVelHash = Animator.StringToHash("Y_Velocity");
@@ -123,16 +123,22 @@ namespace Player.PlayerControl
 
         private void LateUpdate()
         {
-            if (SceneManager.GetActiveScene().buildIndex == 0) return;
-            if (isLocalPlayer)
+            if (SceneManager.GetActiveScene().buildIndex == 0)
             {
-                if (playerInteract.mouseActivity)
+                MenuCam();
+            }
+            else
+            {
+                if (isLocalPlayer)
                 {
-                    //CamMovements();
-                }
-                else
-                {
-                    CamMovements();
+                    if (playerInteract.mouseActivity)
+                    {
+                        //CamMovements();
+                    }
+                    else
+                    {
+                        CamMovements();
+                    }
                 }
             }
         }
@@ -196,6 +202,10 @@ namespace Player.PlayerControl
             camera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
             _playerRigidbody.MoveRotation(_playerRigidbody.rotation *
                                           Quaternion.Euler(0, Mouse_X * MouseSensitivity * Time.smoothDeltaTime, 0));
+        }
+        private void MenuCam()
+        {
+            HeadLook.transform.localPosition = new Vector3(0,0,150);
         }
 
         private void HandleCrouch() => _animator.SetBool(_crouchHash, _inputManager.Crouch);

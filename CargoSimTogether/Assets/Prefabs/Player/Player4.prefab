@@ -3405,6 +3405,37 @@ MonoBehaviour:
       x: 1
       y: 1
       z: 1
+--- !u!1 &7650113097841620906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3336303591694525238}
+  m_Layer: 0
+  m_Name: handT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3336303591694525238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650113097841620906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.453, z: 0.566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3968225148195716005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7761191985728306274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3857,6 +3888,7 @@ GameObject:
   - component: {fileID: 2593624670460281909}
   - component: {fileID: 6719452058790659624}
   - component: {fileID: 679361492970301081}
+  - component: {fileID: 2096997094864080891}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Player
@@ -3887,6 +3919,7 @@ Transform:
   - {fileID: 9016361153192698185}
   - {fileID: 1567345462746203366}
   - {fileID: 4077194044342632545}
+  - {fileID: 3336303591694525238}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8487438802219967387
@@ -3917,6 +3950,7 @@ MonoBehaviour:
   InteractPos: {fileID: 8765430845726263029}
   InteractPosBox: {fileID: 8765430845726263029}
   InteractPosItem: {fileID: 2347668389506440895}
+  InteractPosBrush: {fileID: 0}
   isHandRightTrue: 0
   rigBuilder: {fileID: 3428524907217004920}
   HandTargetRight: {fileID: 8815688822559397170}
@@ -3955,6 +3989,7 @@ MonoBehaviour:
   playerMenuManager: {fileID: 1054587691993512238}
   HeadTarget: {fileID: 3978239055337130868}
   HeadLook: {fileID: 8410965393152291628}
+  _CompassPro: {fileID: 0}
 --- !u!114 &8524029449437292086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4351,7 +4386,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9204251596418359847}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1257f21fdc50b34f92de92d91f61f8e, type: 3}
   m_Name: 
@@ -4361,3 +4396,20 @@ MonoBehaviour:
   syncInterval: 0
   _document: {fileID: 0}
   hitRange: 2
+--- !u!114 &2096997094864080891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9204251596418359847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10190a9ba64d83749a2ce6a378dee771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 268435456
+  targetTransform: {fileID: 3336303591694525238}
+  moveDuration: 2

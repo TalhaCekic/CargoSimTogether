@@ -911,6 +911,37 @@ MonoBehaviour:
   rotationSensitivity: 0.01
   positionPrecision: 0.01
   scalePrecision: 0.01
+--- !u!1 &1702113389030589428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7962788345764669219}
+  m_Layer: 0
+  m_Name: handT
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7962788345764669219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702113389030589428}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000040978193, y: 4.595678e-11, z: 9.9307455e-12, w: 1}
+  m_LocalPosition: {x: 0, y: -0.129, z: 0.598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4674852000797765159}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783241811219981189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1182,7 @@ GameObject:
   - component: {fileID: 8843430258737130718}
   - component: {fileID: 23112644115804089}
   - component: {fileID: 116571912278487902}
+  - component: {fileID: 6251526331053318406}
   m_Layer: 0
   m_Name: Player5
   m_TagString: Player
@@ -1904,6 +1936,23 @@ MonoBehaviour:
   _miniMapLutIntensity: 1
   _miniMapLutTexture: {fileID: 0}
   _miniMapVignetteColor: {r: 0, g: 0, b: 0, a: 0.2627451}
+--- !u!114 &6251526331053318406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266451415077493300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10190a9ba64d83749a2ce6a378dee771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 268435456
+  targetTransform: {fileID: 7962788345764669219}
+  moveSpeed: 5
 --- !u!1 &2305594117445442076
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,6 +2498,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2160058244160321033}
+  - {fileID: 7962788345764669219}
   m_Father: {fileID: 2241798535327459618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6751084715303681088
