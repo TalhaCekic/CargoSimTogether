@@ -66,6 +66,7 @@ public class LobbyController : NetworkBehaviour
 
     public void UpdateButton()
     {
+        if (LocalPlayerController = null) return;
         if (LocalPlayerController.Ready)
         {
             MainMenuCanvas.instance.ReadyButton.text = ReadyString;
