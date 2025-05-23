@@ -86,10 +86,10 @@ public class PlayerData : NetworkBehaviour
             this.PlayerName = NewValue;
         }
 
-        // if (isClient)
-        // {
-        //     LobbyController.Instance.UpdatePlayerList();
-        // }
+         if (isClient)
+         {
+             LobbyController.Instance.UpdatePlayerList();
+         }
     }
     [Server]
     public void SetPlayerValues()

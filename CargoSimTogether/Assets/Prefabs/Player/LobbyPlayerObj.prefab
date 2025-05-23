@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 8537021392187699443}
   - component: {fileID: 5539014316376022476}
   - component: {fileID: 3524706714711978209}
-  - component: {fileID: 5301457703342078680}
+  - component: {fileID: 6927946318086462349}
   m_Layer: 5
   m_Name: LobbyPlayerObj
   m_TagString: PlayerListObj
@@ -583,7 +583,7 @@ MonoBehaviour:
   isReady: 0
   ReadyText: {fileID: 8717094209669959069}
   bg: {fileID: 7623336589469526180}
---- !u!114 &5301457703342078680
+--- !u!114 &6927946318086462349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

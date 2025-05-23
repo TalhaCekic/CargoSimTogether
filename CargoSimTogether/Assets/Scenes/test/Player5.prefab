@@ -249,7 +249,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -936,7 +936,7 @@ Transform:
   m_GameObject: {fileID: 1702113389030589428}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000040978193, y: 4.595678e-11, z: 9.9307455e-12, w: 1}
-  m_LocalPosition: {x: 0, y: -0.129, z: 0.598}
+  m_LocalPosition: {x: 0, y: -0, z: 0.822}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1951,8 +1951,9 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 268435456
-  targetTransform: {fileID: 7962788345764669219}
+  holdPoint: {fileID: 7962788345764669219}
   moveSpeed: 5
+  throwForce: 1000
 --- !u!1 &2305594117445442076
 GameObject:
   m_ObjectHideFlags: 0

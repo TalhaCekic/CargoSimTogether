@@ -16,7 +16,7 @@ public class CanvasSetting : NetworkBehaviour
 
     private void Update()
     {
-        Vector3  cameraPosition = Camera.main.transform.position;
-        transform.LookAt( transform.position - cameraPosition);
+        //Vector3  cameraPosition = Camera.main.transform.position;
+        //transform.LookAt( transform.position + cameraPosition);
     }
 }
